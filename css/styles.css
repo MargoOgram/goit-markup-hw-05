@@ -23,7 +23,7 @@
 }
 .container {
        
-        width: 1170px;
+        width: 1200px;
         padding-left: 15px;
         padding-right: 15px;
         margin: 0 auto;
@@ -121,10 +121,12 @@
         letter-spacing: 0.02em;
         color: var(--title-text-color);
         text-decoration: none;
+        transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-link:hover,
 .header-link:focus {
         color: var(--accent-color);
+        
 }
 .navigation-link {
         position: relative;
@@ -152,16 +154,22 @@
         letter-spacing: 0.02em;
         color: var(--primary-text-color);
         text-decoration: none;
+        transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-contact:hover,
 .header-contact:focus  {
         color: var(--accent-color);
+        
         
 }
 .header-contact:hover .mail-icon,
 .header-contact:focus .mail-icon {
         color: var(--accent-color);
         fill: var(--accent-color);
+        
+}
+.mail-icon {
+        transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .title {
@@ -345,17 +353,21 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team-soc-icon{
         fill: var(--icon-color);
+        transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team-soc-link:hover,
 .team-soc-link:focus {
         background-color: var(--accent-color);
+        
 }
 .team-soc-link:hover .team-soc-icon,
 .team-soc-link:focus .team-soc-icon {
         fill: #FFFFFF;
+        
 }
 .client-list {
         display: flex;
@@ -372,21 +384,25 @@
         box-sizing: border-box;
         align-items: center;
         justify-content: center;
+        transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 
  }
  .client-icon {
         fill: var(--icon-color);
+        transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
  }
  .client-link:hover,
  .client-link:focus {
         border: 1px solid var(--accent-color);
         border-radius: 4px;
+        
  }
  .client-link:hover .client-icon,
  .client-link:focus .client-icon {
          fill:  var(--accent-color);
+        
      
         
  }
@@ -412,6 +428,7 @@
 .footer-contact:hover,
 .foter-contact:focus {
          color: var(--accent-color); 
+        
 } 
 .footer-container {
         display: flex;
@@ -426,6 +443,7 @@
         letter-spacing: 0.03em;
         color: var(--accent-color-title);
         margin-bottom: 9px;
+        transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-contact {
         font-style: normal;
@@ -437,6 +455,7 @@
         color: var(--transparent-color);
         display: block;
         margin-bottom: 9px;
+        transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
         
 }
 .tel {
@@ -463,10 +482,12 @@
         justify-content: center;
         background: rgba(255, 255, 255, 0.1);
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));;
+        transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-soc-link:hover,
 .footer-soc-link:focus {
         background-color: #2196F3;
+        
 }
 .footer-soc-icon {
         fill: #FFFFFF;
@@ -506,19 +527,24 @@
         background: #F5F4FA;
         border-radius: 4px;
         border: 0;
+        transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .btn-port:hover,
 .btn-port:focus {
         color: var(--accent-color-title);
         background: var(--accent-color);
         box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+        
  }
 
  .item-port:hover,
  .item-port:focus {
         box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+        
  }
-
+.item-port{
+       transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 .title-port {
         font-weight: 700;
         font-size: 18px;
@@ -553,10 +579,18 @@
         padding-bottom: 63px;
 
         height: 100%;
+        transform: translateY(100%);
+        transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+.item-port:hover .service-port {
+        transform: translateY(0);
+        
 
 }
 .port-top-wrap {
         position: relative;
+        overflow: hidden;
 }
 
 img {
@@ -606,4 +640,47 @@ img {
 .view{
        margin-top: 0 ;
 }
+.backdrop {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.2);
+        transition: opasity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal {
+        position: absolute;
+        width: 528px;
+        min-height: 581px;
 
+        background: #FFFFFF;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+        border-radius: 4px;
+
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%) scale(1);
+        transition-property: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
+}
+.backdrop.is-hidden .modal {
+        transform: translate(-50%, -50%) scale(0);
+}
+.modal-close {
+        position: absolute;
+        background: #FFFFFF;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 50%;
+        top: 8px;
+        right: 8px;
+        width: 30px;
+        height: 30px;
+}
+.modal-icon {
+        fill: black;
+        
+}
+.is-hidden{
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+}
